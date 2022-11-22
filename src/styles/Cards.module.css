@@ -1,0 +1,65 @@
+:root{
+  --gap:1rem;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.row{
+  width: 50px;
+  height: 50px;
+  background-color: antiquewhite;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.row:hover{
+  background-color: rgb(255, 210, 152);
+}
+
+.col{
+  display: flex;
+  gap:var(--gap);
+}
+
+.grid{
+  display: flex;
+  flex-direction: column;
+  gap:var(--gap);
+  font-size: 1.75rem;
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-block: 2rem;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+.button{
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  outline: 1px solid black;
+}
+.button:hover{
+  background-color: aliceblue;
+}
+
+@media (min-width:800px){
+  .row{
+    width: 100px;
+    height: 100px;
+  }
+
+  .button{
+    padding: 0.5rem 1.5rem;
+  }
+}

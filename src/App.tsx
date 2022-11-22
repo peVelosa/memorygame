@@ -1,12 +1,13 @@
 import './styles/global.css'
 import MemoryGame from './components/MemoryGame'
+import Footer from './components/Footer'
 
 function App() {
-
   return (
-    <div>
+    <>
       <MemoryGame />
-    </div>
+      <Footer />
+    </>
   )
 }
 

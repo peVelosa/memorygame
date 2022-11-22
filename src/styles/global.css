@@ -3,3 +3,30 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html,body,#root{
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Roboto',sans-serif;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button{
+  border:none;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+button:disabled{
+  color:#333;
+}
+
+main{
+  margin-inline: auto;
+  width: 100%;
+}
