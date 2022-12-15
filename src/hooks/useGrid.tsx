@@ -49,7 +49,7 @@ const useGrid = () => {
     setRevealedGrid(newReveleadGrid)
   }
 
-  useEffect(() => {
+  const initGame = () =>{
     const gridSetter = createGrid(option.opt)
     setGrid(gridSetter);
     setRevealedGrid(
@@ -60,6 +60,10 @@ const useGrid = () => {
             .fill(false)
         ))
     )
+  }
+
+  useEffect(() => {
+    initGame()
   }, [])
 
   useEffect(() => {
@@ -67,16 +71,7 @@ const useGrid = () => {
   }, [turn])
 
   useEffect(() => {
-    const gridSetter = createGrid(option.opt)
-    setGrid(gridSetter);
-    setRevealedGrid(
-      new Array(gridSetter.length)
-        .fill('')
-        .map(() => (
-          new Array(gridSetter[0].length)
-            .fill(false)
-        ))
-    )
+    initGame()
     setTurn([])
   }, [option])
 
